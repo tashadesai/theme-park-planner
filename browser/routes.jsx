@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from './history';
 import ChooseTopAttractions from './components/ChooseTopAttractions.jsx';
+import MapWaitTimes from './components/MapWaitTimes.jsx'
 
 /* -----------------    COMPONENT     ------------------ */
 
@@ -14,6 +15,7 @@ const Routes = (props) => (
       <main>
         <Switch>
           <Route exact path="/" component={ChooseTopAttractions} />
+          <Route path="/map" component={MapWaitTimes} />
         </Switch>
       </main>
     </div>

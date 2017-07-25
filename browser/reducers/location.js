@@ -5,17 +5,18 @@ import _ from 'lodash';
 const GET_LOCATION = 'GET_LOCATION';
 
 //Action Creators
-const getLocation = location => ({
+const getLocation = currentLocation => ({
   type: GET_LOCATION,
-  location
+  currentLocation
 })
 
 //Reducers
-export default function dummyReducer (state = {location: []}, action) {
+export default function dummyReducer (state = {currentLocation: [-117.918953, 33.812151]}, action) {
+  //currentLocation is initially set to the centre of disneyland, CA
   const newState = _.merge({}, state);
   switch (action.type) {
     case GET_LOCATION:
-      newState.location = action.location;
+      newState.currentLocation = action.currentLocation;
       break;
 
     default:
