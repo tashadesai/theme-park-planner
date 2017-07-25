@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w & nodemon server/index.js",
+    "start": "webpack -w & nodemon server/start.js",
     "build": "webpack",
     "build-watch": "npm run build -- -w",
     "build-dev": "cross-env NODE_ENV=development npm run build-watch"
@@ -30,7 +30,7 @@
     "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "sequelize": "^4.2.1",
+    "sequelize": "^3.21.0",
     "themeparks": "^4.3.3"
   },
   "devDependencies": {
