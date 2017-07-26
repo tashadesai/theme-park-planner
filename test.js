@@ -12,7 +12,6 @@ disneylandMK.GetWaitTimes().then(function(rides) {
     for(var i=0; i < rides.length; i++) {
       var ride = rides[i]
         // console.log(i + ride.name + ": " + ride.waitTime + " minutes wait");
-        if (ride.status === 'Operating') console.log(i, ride);
-
+        console.log(ride)
     }
 }, console.error);

@@ -11,14 +11,19 @@ var Attraction = {
     type: Sequelize.STRING
   },
   ages: { //['kids', 'little kids', etc]
-    type: Sequelize.ARRAY(Sequelize.STRING),
-    defaultValue: []
+    type: Sequelize.ARRAY(Sequelize.STRING)
   },
   permalink: { //'haunted-mansion'
     type: Sequelize.STRING
   },
   thrillLevels: { //'Loud, Thrill Rides, Dark, Scary, Small Drops'
     type: Sequelize.ARRAY(Sequelize.STRING)
+  },
+  location: {
+    type: Sequelize.ARRAY(Sequelize.DOUBLE) //[latitide, longitude] but mapbox expects [long, lat]
+  },
+  duration: {
+    type: Sequelize.DOUBLE
   }
 };
 
